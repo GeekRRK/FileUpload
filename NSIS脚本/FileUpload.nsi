@@ -3,11 +3,11 @@
 ; HM NIS Edit Wizard helper defines
 !define PRODUCT_NAME "FileUpload"
 !define PRODUCT_VERSION "1.0"
-!define PRODUCT_PUBLISHER "SearchingSoft, Inc."
+!define PRODUCT_PUBLISHER "GeekRRK"
 !define PRODUCT_DIR_REGKEY "Software\Microsoft\Windows\CurrentVersion\App Paths\Update.exe"
 !define PRODUCT_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${PRODUCT_NAME}"
 !define PRODUCT_UNINST_ROOT_KEY "HKLM"
-!define LOCAL_DIR "D:\Projects\FileUpload\NSIS½Å±¾"
+!define LOCAL_DIR "D:\Projects\FileUpload\NSISè„šæœ¬"
 
 ; MUI 1.67 compatible ------
 !include "MUI.nsh"
@@ -43,7 +43,7 @@ ShowInstDetails show
 ShowUnInstDetails show
 
 Function .onInit
-  ;¹Ø±Õ½ø³Ì
+  ;å…³é—­è¿›ç¨‹
   Push $R0
   CheckProc:
     Push "FileUpload.exe"
@@ -86,13 +86,13 @@ SectionEnd
 
 Function un.onUninstSuccess
   HideWindow
-  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) ÒÑ³É¹¦µØ´ÓÄãµÄ¼ÆËã»úÒÆ³ı¡£"
+  MessageBox MB_ICONINFORMATION|MB_OK "$(^Name) å·²æˆåŠŸåœ°ä»ä½ çš„è®¡ç®—æœºç§»é™¤ã€‚"
 FunctionEnd
 
 Function un.onInit
-  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "ÄãÈ·ÊµÒªÍêÈ«ÒÆ³ı $(^Name) £¬Æä¼°ËùÓĞµÄ×é¼ş£¿" IDYES +2
+  MessageBox MB_ICONQUESTION|MB_YESNO|MB_DEFBUTTON2 "ä½ ç¡®å®è¦å®Œå…¨ç§»é™¤ $(^Name) ï¼Œå…¶åŠæ‰€æœ‰çš„ç»„ä»¶ï¼Ÿ" IDYES +2
   Abort
-  ;¹Ø±Õ½ø³Ì
+  ;å…³é—­è¿›ç¨‹
   Push $R0
   CheckProc:
     Push "FileUpload.exe"
